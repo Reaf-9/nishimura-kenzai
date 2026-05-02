@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社西村建材工業 | 兵庫県西脇市の解体工事</title>
+  <meta name="description" content="兵庫県西脇市の解体工事なら株式会社西村建材工業。狭小地・細い路地も対応。小規模案件大歓迎。無料お見積もり受付中。TEL: 0795-22-6175">
+  <meta name="keywords" content="解体工事,西脇市,兵庫県,狭小地,小規模解体,西村建材工業,解体業者">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== HERO ===== */
+    .hero {
+      margin-top: 80px;
+      min-height: calc(100vh - 80px);
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.6) 100%),
+        url('https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1408x768_v-fms_webp_5a8fe6f1-f7be-496f-84b9-fceed55b934c_middle.webp') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 80px 48px;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.5vw, 52px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.35;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+    }
+    .hero p {
+      font-size: clamp(16px, 2vw, 20px);
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+    @media(max-width:960px){
+      .hero { padding: 60px 24px; }
+    }
+
+    /* ===== 選ばれる理由 ===== */
+    #reasons { background: var(--off-white); }
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .reason-item {
+      padding: 0 32px 0 0;
+    }
+    .reason-item:last-child { padding-right: 0; }
+    .reason-img {
+      width: 100%; height: 240px;
+      object-fit: cover;
+      margin-bottom: 24px;
+    }
+    .reason-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+    .reason-text {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.85;
+    }
+    @media(max-width:960px){
+      .reasons-grid { grid-template-columns: 1fr; }
+      .reason-item { padding: 0 0 40px 0; }
+    }
+
+    /* ===== サービス ===== */
+    #services { background: #c0c8d0; }
+    #services .section-label { color: var(--navy); }
+    #services .section-title { color: var(--navy); }
+    .services-list { display: flex; flex-direction: column; gap: 0; }
+    .service-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 420px;
+    }
+    .service-row.reverse { direction: rtl; }
+    .service-row.reverse > * { direction: ltr; }
+    .service-img-wrap { overflow: hidden; }
+    .service-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .service-img-wrap:hover img { transform: scale(1.04); }
+    .service-content {
+      background: var(--white);
+      padding: 56px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .service-num {
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--light-gray);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .service-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .service-text {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.9;
+      margin-bottom: 28px;
+    }
+    @media(max-width:960px){
+      .service-row, .service-row.reverse { grid-template-columns: 1fr; direction: ltr; }
+      .service-img-wrap { height: 240px; }
+      .service-content { padding: 36px 24px; }
+    }
+
+    /* ===== 実績ギャラリー ===== */
+    #gallery { background: var(--dark); padding: 96px 48px; }
+    #gallery .section-label { color: rgba(255,255,255,0.5); }
+    #gallery .section-title { color: var(--white); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .gallery-item {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s, opacity 0.3s;
+    }
+    .gallery-item:hover img { transform: scale(1.06); opacity: 0.85; }
+    @media(max-width:960px){
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      #gallery { padding: 72px 24px; }
+    }
+
+    /* ===== 施工の流れ ===== */
+    #flow { background: var(--off-white); }
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: #dde3ea;
+    }
+    .flow-step {
+      background: var(--white);
+      padding: 32px 28px;
+    }
+    .flow-step-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+    .flow-step-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .flow-step-text {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+    @media(max-width:960px){
+      .flow-steps { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width:600px){
+      .flow-steps { grid-template-columns: 1fr; }
+    }
+
+    /* ===== お問い合わせCTA ===== */
+    #cta {
+      background: var(--navy);
+      padding: 96px 48px;
+      text-align: center;
+    }
+    #cta .section-title { color: var(--white); margin-bottom: 12px; }
+    #cta p { color: rgba(255,255,255,0.75); font-size: 16px; margin-bottom: 40px; }
+    .tel-big {
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.05em;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .tel-hours {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 40px;
+    }
+    @media(max-width:960px){
+      #cta { padding: 72px 24px; }
+      .tel-big { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-mark">㈱</div>
+    <span class="logo-text">西村建材工業</span>
+  </a>
+  <nav>
+    <a href="index.html" class="active">トップ</a>
+    <a href="company.html">会社概要</a>
+    <a href="service.html">サービス内容</a>
+    <a href="contact.html">お問い合わせ</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>小回りのきく解体屋<br>細い道・狭小地も<br>お任せください</h1>
+  <p>無料お見積もり・ご相談</p>
+  <a href="contact.html" class="btn btn-white" style="width:fit-content">
+    無料お見積もり・ご相談
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+  </a>
+</section>
+
+<!-- 選ばれる理由 -->
+<section id="reasons">
+  <div class="section-header">
+    <div class="section-label">REASON</div>
+    <h2 class="section-title">選ばれる理由</h2>
+  </div>
+  <div class="reasons-grid">
+    <div class="reason-item">
+      <img class="reason-img"
+        src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_bd1eb890-31db-471c-8968-93172a2e885e_middle.webp"
+        alt="狭小地対応" loading="lazy">
+      <h3 class="reason-title">狭小地対応</h3>
+      <p class="reason-text">大型車両が入れない狭い路地や、隣地との間隔が極めて狭い場所での作業もお任せください。2t・3tダンプを駆使し、他社で断られたような難しい環境でも、近隣への配慮を欠かさず安全・丁寧に解体いたします。</p>
+    </div>
+    <div class="reason-item">
+      <img class="reason-img"
+        src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_8101c984-28fb-4830-a211-f015b0a9f7fa_middle.webp"
+        alt="小規模解体工事" loading="lazy">
+      <h3 class="reason-title">小規模解体工事</h3>
+      <p class="reason-text">「こんな小さなこと頼んでもいいのかな？」という心配は無用です。庭の物置一つ、古い塀の撤去、庭木の処分など、「ちょっとした解体」もすぐに駆けつけます。</p>
+    </div>
+    <div class="reason-item">
+      <img class="reason-img"
+        src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_c0dcd7ac-8029-4207-9cab-da78d683f9aa_small.webp"
+        alt="地域密着対応" loading="lazy">
+      <h3 class="reason-title">地域密着対応</h3>
+      <p class="reason-text">少数精鋭の地域密着体制だからこそ、余計な経費をかけず、迅速かつ柔軟な対応が可能です。地元の皆様に寄り添い、一件一件、責任を持って管理いたします。</p>
+    </div>
+  </div>
+</section>
+
+<!-- サービス -->
+<section id="services">
+  <div class="section-header">
+    <div class="section-label">SERVICE</div>
+    <h2 class="section-title">サービス</h2>
+  </div>
+  <div class="services-list">
+    <div class="service-row">
+      <div class="service-img-wrap">
+        <img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_e9c43565-b0ff-46a3-91f1-e62734639a94_middle.webp" alt="小規模案件大歓迎" loading="lazy">
+      </div>
+      <div class="service-content">
+        <div class="service-num">01</div>
+        <h3 class="service-title">小規模案件大歓迎</h3>
+        <p class="service-text">住宅の全面解体だけでなく、部分的な撤去作業も承ります。古くなったベランダやガレージ、ブロック塀の撤去など、どこに頼めばいいか迷うような小さな工事も、まずはお気軽にご相談ください。</p>
+        <a href="service.html" class="btn btn-navy" style="width:fit-content">詳細を見る
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="service-row reverse">
+      <div class="service-img-wrap">
+        <img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_acee0da3-14f7-4ce1-8cd4-9ca304287ea2.webp" alt="一般住宅解体" loading="lazy">
+      </div>
+      <div class="service-content">
+        <div class="service-num">02</div>
+        <h3 class="service-title">一般住宅解体</h3>
+        <p class="service-text">コストパフォーマンスの高い施工を実現します。解体後の土地活用まで見据え、周辺住民の方々への挨拶回りから整地まで、一貫して丁寧に行います。</p>
+        <a href="service.html" class="btn btn-navy" style="width:fit-content">詳細を見る
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="service-row">
+      <div class="service-img-wrap">
+        <img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_67f427fe-e161-4cc1-aa31-4e7c3ed00406.webp" alt="地域密着対応" loading="lazy">
+      </div>
+      <div class="service-content">
+        <div class="service-num">03</div>
+        <h3 class="service-title">地域密着対応</h3>
+        <p class="service-text">地元の地理を熟知しているからこそ、細い道でのルート確保や、近隣対策もスムーズです。大手には真似できないスピード感と、心の通ったサービスをお約束します。</p>
+        <a href="service.html" class="btn btn-navy" style="width:fit-content">詳細を見る
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 解体工事実績 -->
+<section id="gallery">
+  <div class="section-header">
+    <div class="section-label">WORKS</div>
+    <h2 class="section-title">解体工事実績</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_5aecdab1-71d4-4e32-9a11-fb9cab504eb5_middle.webp" alt="解体工事実績" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_b00f1f8e-7b29-4e72-bed1-13dab5d94564_middle.webp" alt="解体工事実績" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_26f96cff-dcf0-405b-ba18-99cd80a8e40f_middle.webp" alt="解体工事実績" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_3ea57edd-f37d-49fd-969f-1b4bf8f5f3d4_middle.webp" alt="解体工事実績" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_e13b0734-ca6b-4d6b-ac71-a08e2394224c_middle.webp" alt="解体工事実績" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_7d2b9641-dc09-459b-b738-cf8308f63f76_middle.webp" alt="解体工事実績" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- 施工の流れ -->
+<section id="flow">
+  <div class="section-header">
+    <div class="section-label">FLOW</div>
+    <h2 class="section-title">施工の流れ</h2>
+  </div>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-step-num">01</div>
+      <div class="flow-step-title">お問い合わせ・お見積もり</div>
+      <p class="flow-step-text">予約フォームからお問い合わせいただき、日程の調整を行います。</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-num">02</div>
+      <div class="flow-step-title">ご来店</div>
+      <p class="flow-step-text">ご案内した施設にお越しください。</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-num">03</div>
+      <div class="flow-step-title">カウンセリング</div>
+      <p class="flow-step-text">透明性の高いお見積書を作成します。追加費用の不安がないよう、詳細までしっかり説明いたします。</p>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:40px;">
+    <a href="service.html" class="btn btn-navy">詳細を見る
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- お問い合わせCTA -->
+<section id="cta">
+  <h2 class="section-title">お問い合わせ</h2>
+  <p>無料にお見積りください。お気軽にご相談ください。</p>
+  <div>
+    <span style="font-size:13px;color:rgba(255,255,255,0.6);display:block;margin-bottom:8px;">お電話でのお問い合わせはこちら</span>
+    <a href="tel:0795226175" class="tel-big">0795-22-6175</a>
+    <p class="tel-hours">営業時間：8時〜17時</p>
+  </div>
+  <a href="contact.html" class="btn btn-white">フォームからのお問い合わせはこちら
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">株式会社西村建材工業</div>
+    <div class="footer-info">
+      兵庫県西脇市前島町305-14　TEL: 0795-22-6175<br>
+      © 2024 株式会社西村建材工業 All Rights Reserved.
+    </div>
+  </div>
+  <nav class="footer-nav">
+    <a href="index.html">トップ</a>
+    <a href="company.html">会社概要</a>
+    <a href="service.html">サービス内容</a>
+    <a href="contact.html">お問い合わせ</a>
+  </nav>
+</footer>
+
+</body>
+</html>
