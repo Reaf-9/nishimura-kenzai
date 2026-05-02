@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サービス内容 | 株式会社西村建材工業</title>
+  <meta name="description" content="西村建材工業のサービス内容。小規模案件大歓迎、一般住宅解体、地域密着対応。施工の流れ・解体工事実績も掲載。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* サービス概要 */
+    .service-intro {
+      background: var(--navy);
+      padding: 80px 48px;
+    }
+    .service-intro-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .service-intro .section-label { color: rgba(255,255,255,0.5); }
+    .service-intro .section-title { color: var(--white); }
+    .service-intro .section-lead { color: rgba(255,255,255,0.75); max-width: none; }
+    .service-intro-img {
+      width: 100%; height: 360px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    /* サービス詳細 */
+    .service-detail { background: var(--off-white); padding: 96px 48px; }
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .svc-card {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    }
+    .svc-card-img { width: 100%; height: 200px; object-fit: cover; }
+    .svc-card-body { padding: 28px; }
+    .svc-card-num {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--light-gray);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .svc-card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .svc-card-text {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.9;
+    }
+
+    /* 施工の流れ */
+    .flow-section { background: var(--white); padding: 96px 48px; }
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      background: var(--light-gray);
+    }
+    .flow-card {
+      background: var(--white);
+      padding: 28px 24px;
+      position: relative;
+    }
+    .flow-card-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .flow-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .flow-card-text {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    /* 実績 */
+    .works-section { background: var(--dark); padding: 96px 48px; }
+    .works-section .section-label { color: rgba(255,255,255,0.5); }
+    .works-section .section-title { color: var(--white); }
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .works-item { aspect-ratio: 4/3; overflow: hidden; }
+    .works-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .works-item:hover img { transform: scale(1.05); }
+
+    /* 設備紹介 */
+    .equipment { background: var(--off-white); padding: 96px 48px; }
+
+    @media(max-width:960px){
+      .service-intro-inner { grid-template-columns: 1fr; gap: 40px; }
+      .service-intro { padding: 72px 24px; }
+      .service-detail { padding: 72px 24px; }
+      .service-cards { grid-template-columns: 1fr; }
+      .flow-section { padding: 72px 24px; }
+      .flow-grid { grid-template-columns: 1fr 1fr; }
+      .works-section { padding: 72px 24px; }
+      .works-grid { grid-template-columns: 1fr 1fr; }
+      .equipment { padding: 72px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-mark">㈱</div>
+    <span class="logo-text">西村建材工業</span>
+  </a>
+  <nav>
+    <a href="index.html">トップ</a>
+    <a href="company.html">会社概要</a>
+    <a href="service.html" class="active">サービス内容</a>
+    <a href="contact.html">お問い合わせ</a>
+  </nav>
+</header>
+
+<!-- サービス概要 -->
+<div class="service-intro" style="margin-top:80px;">
+  <div class="service-intro-inner">
+    <div>
+      <div class="section-label">SERVICE</div>
+      <h1 class="section-title" style="font-size:36px;">わたしたちのサービス</h1>
+      <p class="section-lead" style="margin-top:16px;">西村建材工業は、地域に根ざした解体のスペシャリストです。住宅解体から外構撤去まで、幅広く対応いたします。保有する2t・3tダンプやアームロールを駆使し、大型車が入れない住宅街でもスムーズな作業をお約束。誠実な価格と確かな技術で、お客様の新しい一歩をサポートします。</p>
+    </div>
+    <img class="service-intro-img"
+      src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_e9c43565-b0ff-46a3-91f1-e62734639a94_middle.webp"
+      alt="サービス概要" loading="lazy">
+  </div>
+</div>
+
+<!-- サービス詳細 -->
+<section class="service-detail">
+  <div class="service-cards">
+    <div class="svc-card">
+      <img class="svc-card-img" src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_e9c43565-b0ff-46a3-91f1-e62734639a94_middle.webp" alt="小規模案件大歓迎" loading="lazy">
+      <div class="svc-card-body">
+        <div class="svc-card-num">01</div>
+        <h2 class="svc-card-title">小規模案件大歓迎</h2>
+        <p class="svc-card-text">住宅の全面解体だけでなく、部分的な撤去作業も承ります。古くなったベランダやガレージ、ブロック塀の撤去など、どこに頼めばいいか迷うような小さな工事も、まずはお気軽にご相談ください。</p>
+      </div>
+    </div>
+    <div class="svc-card">
+      <img class="svc-card-img" src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_acee0da3-14f7-4ce1-8cd4-9ca304287ea2.webp" alt="一般住宅解体" loading="lazy">
+      <div class="svc-card-body">
+        <div class="svc-card-num">02</div>
+        <h2 class="svc-card-title">一般住宅解体</h2>
+        <p class="svc-card-text">コストパフォーマンスの高い施工を実現します。解体後の土地活用まで見据え、周辺住民の方々への挨拶回りから整地まで、一貫して丁寧に行います。</p>
+      </div>
+    </div>
+    <div class="svc-card">
+      <img class="svc-card-img" src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_67f427fe-e161-4cc1-aa31-4e7c3ed00406.webp" alt="地域密着対応" loading="lazy">
+      <div class="svc-card-body">
+        <div class="svc-card-num">03</div>
+        <h2 class="svc-card-title">地域密着対応</h2>
+        <p class="svc-card-text">地元の地理を熟知しているからこそ、細い道でのルート確保や、近隣対策もスムーズです。大手には真似できないスピード感と、心の通ったサービスをお約束します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 施工の流れ -->
+<section class="flow-section">
+  <div class="section-header">
+    <div class="section-label">FLOW</div>
+    <h2 class="section-title">施工の流れ</h2>
+  </div>
+  <div class="flow-grid">
+    <div class="flow-card">
+      <div class="flow-card-num">01</div>
+      <div class="flow-card-title">お問い合わせ・お見積もり</div>
+      <p class="flow-card-text">予約フォームからお問い合わせいただき、日程の調整を行います。</p>
+    </div>
+    <div class="flow-card">
+      <div class="flow-card-num">02</div>
+      <div class="flow-card-title">ご来店</div>
+      <p class="flow-card-text">ご案内した施設にお越しください。</p>
+    </div>
+    <div class="flow-card">
+      <div class="flow-card-num">03</div>
+      <div class="flow-card-title">カウンセリング</div>
+      <p class="flow-card-text">透明性の高いお見積書を作成します。追加費用の不安がないよう、詳細までしっかり説明いたします。</p>
+    </div>
+    <div class="flow-card">
+      <div class="flow-card-num">04</div>
+      <div class="flow-card-title">ご契約</div>
+      <p class="flow-card-text">お見積り内容にご納得いただけましたら、正式なご契約となります。</p>
+    </div>
+    <div class="flow-card">
+      <div class="flow-card-num">05</div>
+      <div class="flow-card-title">近隣挨拶・工事準備</div>
+      <p class="flow-card-text">着工前に、弊社スタッフが近隣の皆様へご挨拶に伺い、トラブル防止に努めます。</p>
+    </div>
+    <div class="flow-card">
+      <div class="flow-card-num">06</div>
+      <div class="flow-card-title">解体工事開始</div>
+      <p class="flow-card-text">養生を徹底し、騒音・粉塵を最小限に抑えながら、安全第一で作業を進めます。</p>
+    </div>
+    <div class="flow-card">
+      <div class="flow-card-num">07</div>
+      <div class="flow-card-title">整地・片付け</div>
+      <p class="flow-card-text">解体後は廃材を分別して搬出し、最後は土地を平らに整えて美しく仕上げます。</p>
+    </div>
+    <div class="flow-card">
+      <div class="flow-card-num">08</div>
+      <div class="flow-card-title">完了報告・引き渡し</div>
+      <p class="flow-card-text">現地をご確認いただき、問題がなければ完了です。必要な書類の提出も行います。</p>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:48px;">
+    <a href="contact.html" class="btn btn-navy">お問い合わせする
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- 解体工事実績 -->
+<section class="works-section">
+  <div class="section-header">
+    <div class="section-label">WORKS</div>
+    <h2 class="section-title">解体工事実績</h2>
+  </div>
+  <div class="works-grid">
+    <div class="works-item"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_5aecdab1-71d4-4e32-9a11-fb9cab504eb5_middle.webp" alt="解体実績" loading="lazy"></div>
+    <div class="works-item"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_b00f1f8e-7b29-4e72-bed1-13dab5d94564_middle.webp" alt="解体実績" loading="lazy"></div>
+    <div class="works-item"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_26f96cff-dcf0-405b-ba18-99cd80a8e40f_middle.webp" alt="解体実績" loading="lazy"></div>
+    <div class="works-item"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_3ea57edd-f37d-49fd-969f-1b4bf8f5f3d4_middle.webp" alt="解体実績" loading="lazy"></div>
+    <div class="works-item"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_e13b0734-ca6b-4d6b-ac71-a08e2394224c_middle.webp" alt="解体実績" loading="lazy"></div>
+    <div class="works-item"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/VGOK9zgNan/s-1366x768_v-fms_webp_7d2b9641-dc09-459b-b738-cf8308f63f76_middle.webp" alt="解体実績" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- 保有設備紹介 -->
+<section class="equipment">
+  <div class="section-header">
+    <div class="section-label">EQUIPMENT</div>
+    <h2 class="section-title">保有設備紹介</h2>
+    <p class="section-lead">2t・3tダンプ、アームロールなど、狭小地でも活躍する専用車両を保有。大型車が入れない現場でもスムーズに対応いたします。</p>
+  </div>
+  <div style="text-align:center;margin-top:40px;">
+    <a href="contact.html" class="btn btn-navy">設備についてお問い合わせ
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-logo">株式会社西村建材工業</div>
+    <div class="footer-info">
+      兵庫県西脇市前島町305-14　TEL: 0795-22-6175<br>
+      © 2024 株式会社西村建材工業 All Rights Reserved.
+    </div>
+  </div>
+  <nav class="footer-nav">
+    <a href="index.html">トップ</a>
+    <a href="company.html">会社概要</a>
+    <a href="service.html">サービス内容</a>
+    <a href="contact.html">お問い合わせ</a>
+  </nav>
+</footer>
+
+</body>
+</html>
